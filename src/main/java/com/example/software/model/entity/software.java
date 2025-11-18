@@ -6,8 +6,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Setter
+@Getter
 public class software {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,6 +47,8 @@ public class software {
         this.tipo = dto.tipo();
         this.categoria = dto.categoria();
     }
+
+    <<<<<<<HEAD
 
     public Long getId() {
         return id;
@@ -100,5 +106,5 @@ public class software {
         this.categoria = categoria;
     }
 
-
+    =======>>>>>>>81bbb81 (alteração na pasta model)
 }

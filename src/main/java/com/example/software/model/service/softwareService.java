@@ -15,12 +15,12 @@ public class softwareService {
     softwareRepository softwareRepository;
     softwareValidation softwareValidation;
 
-    public softwareService (softwareRepository softwareRepository, softwareValidation softwareValidation) {
+    public softwareService(softwareRepository softwareRepository, softwareValidation softwareValidation) {
         this.softwareRepository = softwareRepository;
         this.softwareValidation = softwareValidation;
     }
 
-    public software create (softwareDTO dto) {
+    public software create(softwareDTO dto) {
         return softwareRepository.save(new software(dto));
     }
 
@@ -43,7 +43,7 @@ public class softwareService {
 
     public software findById(long id) {
         return softwareRepository.findById(id)
-                .orElseThrow(()-> new NoSuchElementException("Software não encontrado com o id: " + id));
+                .orElseThrow(() -> new NoSuchElementException("Software não encontrado com o id: " + id));
     }
 
     public List<software> findAll() {

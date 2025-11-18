@@ -13,7 +13,7 @@ public class softwareController {
 
     private softwareService softwareService;
 
-    public softwareController (softwareService softwareService){
+    public softwareController(softwareService softwareService) {
         this.softwareService = softwareService;
     }
 
@@ -41,6 +41,5 @@ public class softwareController {
     public void delete(@PathVariable Long id) {
         softwareService.delete(id);
     }
-
 
 }

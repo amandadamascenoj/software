@@ -1,8 +1,15 @@
+server:
+  port: 8001
+
 spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: software
   datasource:
     url: jdbc:postgresql://localhost:5432/software_db
     username: postgres
-    password: 123456
+    password: postgres
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -13,5 +20,9 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-server:
-  port: 8001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
