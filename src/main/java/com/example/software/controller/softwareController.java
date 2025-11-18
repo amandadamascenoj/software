@@ -1,8 +1,8 @@
 package com.example.software.controller;
 
 import com.example.software.dto.softwareDTO;
-import com.example.software.model.software;
-import com.example.software.service.softwareService;
+import com.example.software.model.entity.software;
+import com.example.software.model.service.softwareService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

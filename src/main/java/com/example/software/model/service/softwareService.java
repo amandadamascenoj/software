@@ -1,9 +1,9 @@
-package com.example.software.service;
+package com.example.software.model.service;
 
 import com.example.software.dto.softwareDTO;
-import com.example.software.model.software;
-import com.example.software.repository.softwareRepository;
-import com.example.software.validation.softwareValidation;
+import com.example.software.model.entity.software;
+import com.example.software.model.repository.softwareRepository;
+import com.example.software.model.validation.softwareValidation;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

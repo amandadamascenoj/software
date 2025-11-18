@@ -1,4 +1,4 @@
-package com.example.software.model;
+package com.example.software.model.entity;
 
 import com.example.software.dto.softwareDTO;
 import jakarta.annotation.Nonnull;
