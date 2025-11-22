@@ -49,4 +49,8 @@ public class softwareService {
     public List<software> findAll() {
         return softwareRepository.findAll();
     }
+
+    public boolean exists(Long id) {
+        return softwareRepository.existsById(id);
+    }
 }

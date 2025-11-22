@@ -2,7 +2,10 @@ package com.example.software.controller;
 
 import com.example.software.dto.softwareDTO;
 import com.example.software.model.entity.software;
+import com.example.software.model.repository.softwareRepository;
 import com.example.software.model.service.softwareService;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,6 +43,11 @@ public class softwareController {
     @DeleteMapping("delete/{id}")
     public void delete(@PathVariable Long id) {
         softwareService.delete(id);
+    }
+
+    @GetMapping("/exists/{id}")
+    public boolean exists(@PathVariable Long id) {
+        return softwareService.exists(id);
     }
 
 }
